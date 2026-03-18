@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f4f4f4;
+}
+
+header {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background: #34495e;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: #ecf0f1;
+}
+
+.services {
+  padding: 20px;
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  width: 25%;
+  margin: 10px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px gray;
+  border-radius: 10px;
+}
+
+.contact {
+  text-align: center;
+  padding: 30px;
+  background: #bdc3c7;
+}
+
+button {
+  padding: 10px 20px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: black;
+}
+
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
