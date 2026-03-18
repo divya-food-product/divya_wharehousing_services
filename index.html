@@ -6,6 +6,63 @@
   <title>Divya Food Product</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <div id="chatbox">
+  <div id="messages"></div>
+  <input type="text" id="userInput" placeholder="Ask something...">
+  <button onclick="sendMessage()">Send</button>
+</div>
+
+<style>
+#chatbox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 250px;
+  background: white;
+  box-shadow: 0 0 10px gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#messages {
+  height: 150px;
+  overflow-y: auto;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#userInput {
+  width: 70%;
+}
+</style>
+
+<script>
+function sendMessage() {
+  let input = document.getElementById("userInput").value;
+  let messages = document.getElementById("messages");
+
+  messages.innerHTML += "<p><b>You:</b> " + input + "</p>";
+
+  let reply = "";
+
+  if (input.toLowerCase().includes("price")) {
+    reply = "Our storage and packaging charges are affordable. Contact us for details.";
+  } 
+  else if (input.toLowerCase().includes("service")) {
+    reply = "We provide storage, packaging, and labeling services.";
+  } 
+  else if (input.toLowerCase().includes("contact")) {
+    reply = "Call us at 9876543210.";
+  } 
+  else {
+    reply = "Hello! How can I help you with storage and packaging?";
+  }
+
+  messages.innerHTML += "<p><b>Bot:</b> " + reply + "</p>";
+
+  document.getElementById("userInput").value = "";
+}
+</script>
 <body>
 
 <header>
