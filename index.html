@@ -6,59 +6,119 @@
   <title>Divya Food Product</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  <div id="chatbox">
-  <div id="messages"></div>
-  <input type="text" id="userInput" placeholder="Ask something...">
-  <button onclick="sendMessage()">Send</button>
+  <div id="chat-container">
+  <div id="chat-header">💬 Divya Assistant</div>
+  <div id="chat-messages"></div>
+  
+  <div id="chat-input-area">
+    <input type="text" id="userInput" placeholder="Ask something...">
+    <button onclick="sendMessage()">➤</button>
+  </div>
 </div>
 
 <style>
-#chatbox {
+#chat-container {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 250px;
+  width: 280px;
   background: white;
-  box-shadow: 0 0 10px gray;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  font-family: Arial;
+  overflow: hidden;
 }
 
-#messages {
-  height: 150px;
+#chat-header {
+  background: #2c3e50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#chat-messages {
+  height: 200px;
   overflow-y: auto;
-  font-size: 14px;
-  margin-bottom: 10px;
+  padding: 10px;
+  background: #f9f9f9;
+}
+
+.message {
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.user {
+  background: #3498db;
+  color: white;
+  margin-left: auto;
+}
+
+.bot {
+  background: #ecf0f1;
+}
+
+#chat-input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
 }
 
 #userInput {
-  width: 70%;
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+button {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: black;
 }
 </style>
 
 <script>
+  document.getElementById("userInput").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    sendMessage();
+  }
+});
 function sendMessage() {
   let input = document.getElementById("userInput").value;
-  let messages = document.getElementById("messages");
+  let messages = document.getElementById("chat-messages");
 
-  messages.innerHTML += "<p><b>You:</b> " + input + "</p>";
+  if(input.trim() === "") return;
+
+  messages.innerHTML += `<div class="message user">${input}</div>`;
 
   let reply = "";
 
   if (input.toLowerCase().includes("price")) {
-    reply = "Our storage and packaging charges are affordable. Contact us for details.";
+    reply = "Our charges are affordable. Please contact us for exact pricing.";
   } 
   else if (input.toLowerCase().includes("service")) {
     reply = "We provide storage, packaging, and labeling services.";
   } 
   else if (input.toLowerCase().includes("contact")) {
-    reply = "Call us at 9876543210.";
+    reply = "📞 Call us: 9876543210";
   } 
   else {
-    reply = "Hello! How can I help you with storage and packaging?";
+    reply = "Hello 👋 I can help you with storage and packaging services.";
   }
 
-  messages.innerHTML += "<p><b>Bot:</b> " + reply + "</p>";
+  setTimeout(() => {
+    messages.innerHTML += `<div class="message bot">${reply}</div>`;
+    messages.scrollTop = messages.scrollHeight;
+  }, 500);
 
   document.getElementById("userInput").value = "";
 }
