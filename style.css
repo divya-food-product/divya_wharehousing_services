@@ -73,55 +73,84 @@ footer {
   text-align: center;
   padding: 10px;
 }
-/* CONTACT SECTION */
-.contact {
-  padding: 40px 20px;
-  text-align: center;
+.callback {
+  padding: 60px 20px;
+  background: #f5f7fa;
+}
+
+/* BOX LAYOUT */
+.callback-box {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* LEFT TEXT */
+.callback-text {
+  flex: 1;
+  text-align: left;
+}
+
+.callback-text h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.callback-text p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.callback-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.callback-text li {
+  margin-bottom: 8px;
 }
 
 /* FORM */
-#contactForm {
+.callback-form {
+  flex: 1;
   max-width: 350px;
-  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* INPUTS */
-#contactForm input,
-#contactForm textarea {
+.callback-form input,
+.callback-form textarea {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
-  transition: 0.2s;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
-/* FOCUS */
-#contactForm input:focus,
-#contactForm textarea:focus {
-  border-color: #2c3e50;
-  outline: none;
-}
-
-/* BUTTON */
-#contactForm button {
+.callback-form button {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   background: #2c3e50;
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 15px;
+  border-radius: 6px;
   cursor: pointer;
 }
 
-#contactForm button:hover {
-  background: black;
-}
+/* MOBILE */
+@media (max-width: 700px) {
+  .callback-box {
+    flex-direction: column;
+    text-align: center;
+  }
 
-/* HEADING STYLE */
-.contact h3 {
-  margin-top: 20px;
-  font-size: 18px;
+  .callback-text {
+    text-align: center;
+  }
 }
