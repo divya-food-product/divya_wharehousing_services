@@ -232,22 +232,32 @@ document.getElementById("chat-messages").scrollTop = 9999;
   <p>📍 Location: Budhvihar phase 2, New Delhi, 110085</p>
 
   <button onclick="alert('Call us now!')">Get Service</button>
-
-  <!-- PREMIUM FORM -->
-  <h3>📩 Get a Callback</h3>
-  <p style="font-size:13px; color:gray;">We respond within 1 hour</p>
-
-  <form id="contactForm">
-    <input type="text" id="name" placeholder="Your Name" required>
-    
-    <input type="text" id="phone" placeholder="Phone Number" required>
-    
-    <textarea id="message" placeholder="Your Message / Feedback" required></textarea>
-    
-    <button type="submit">Submit</button>
-  </form>
 </section>
+<section id="callback" class="callback">
+  <div class="callback-box">
 
+    <div class="callback-text">
+      <h2>📦 Need Help With Packing and other services?</h2>
+      <p>We handle your orders so you can focus on growing your business.</p>
+      <ul>
+        <li>✔ Fast Packing</li>
+        <li>✔ Bulk Orders</li>
+        <li>✔ Reliable Service</li>
+      </ul>
+    </div>
+
+    <form id="contactForm" class="callback-form">
+      <h3>Get a Callback</h3>
+
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <textarea id="message" placeholder="Your Message"></textarea>
+
+      <button type="submit">Request Callback</button>
+    </form>
+
+  </div>
+</section>
 
 <footer>
   <p>© 2026 Divya Food Product</p>
