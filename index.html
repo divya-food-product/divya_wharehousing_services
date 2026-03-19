@@ -104,6 +104,12 @@ button {
 button:hover {
   background: black;
 }
+
+/* LOGO STYLE */
+header img {
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
 </style>
 </head>
 
@@ -115,7 +121,7 @@ button:hover {
 <!-- CHAT BOX -->
 <div id="chat-container">
   <div id="chat-header">
-    💬 Divya Assistant
+    <img src="logo.png" style="width:20px; vertical-align:middle;"> Divya Assistant
     <span onclick="toggleChat()">✖</span>
   </div>
 
@@ -182,10 +188,10 @@ function sendMessage() {
 document.getElementById("chat-messages").scrollTop = 9999;
 </script>
 
-<!-- YOUR WEBSITE CONTENT -->
-
-<header>
-  <h1>📦 Divya services</h1>
+<!-- HEADER WITH LOGO -->
+<header style="text-align:center; padding:20px;">
+  <img src="logo.png" alt="Divya Services Logo" style="width:120px;">
+  <h1>Divya Services</h1>
   <p>Storage & Packaging Services</p>
 </header>
 
