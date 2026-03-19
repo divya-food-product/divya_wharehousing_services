@@ -73,3 +73,55 @@ footer {
   text-align: center;
   padding: 10px;
 }
+/* CONTACT SECTION */
+.contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* FORM */
+#contactForm {
+  max-width: 350px;
+  margin: 20px auto;
+}
+
+/* INPUTS */
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+/* FOCUS */
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: #2c3e50;
+  outline: none;
+}
+
+/* BUTTON */
+#contactForm button {
+  width: 100%;
+  padding: 12px;
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#contactForm button:hover {
+  background: black;
+}
+
+/* HEADING STYLE */
+.contact h3 {
+  margin-top: 20px;
+  font-size: 18px;
+}
